@@ -71,8 +71,8 @@ router.post("/", auth, async (req, res) => {
     const { error } = validateCard(req.body);
     if (error) return res.status(400).send(error.details[0].message);
     // 2 - is biz = true?
-    if (!req.user.biz)
-      return res.status(400).send("You are not allowed to add a new business ");
+    if (!req.user)
+      return res.status(400).send("You are not allowed to add a new business");
     //3 - create a new object
     const card = new Card({
       bizName: req.body.bizName,
