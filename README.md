@@ -1,2 +1,2 @@
-# first-NODE
- first node proj works with react proj
+# Cards Server
+Server side project for cards web application
